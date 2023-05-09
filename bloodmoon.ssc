@@ -1,0 +1,21 @@
+//
+// Name: Red Moon 
+// License: Public Domain
+// Author: AllysonD2v
+// Version: 1.0
+// Description: Script to demonstrate the next red moon.
+//
+
+core.wait(1);
+core.clear("natural");
+LandscapeMgr.setFlagLandscape(false);
+LandscapeMgr.setFlagAtmosphere(false);
+LandscapeMgr.setFlagFog(false);
+core.wait(1);
+core.setDate("2025:03:14T03:47:00");
+core.selectObjectByName("Moon", true);
+StelMovementMgr.setFlagTracking(true);
+core.wait(2);
+StelMovementMgr.autoZoomIn(2);
+core.wait(2);
+core.setTimeRate(250);
